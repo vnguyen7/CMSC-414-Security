@@ -1,0 +1,6 @@
+1/ The pictur of CBC encoded is covered, so it cannot be seen or guessed by others. The picture of ECB still has the content of the original picture, but with stripes to cover up the color. 
+
+2/ CBC has the first portion encoded by a randomly generated key, and the following portion encoded by the previous portion, and so do the every other portion. So after the encoding, a unique image is created. 
+ ECb uses ciphertext to converts each block directly. There are repeated in the encrypted image as well as repeated in the original images. 
+
+3/ Useful data cannot be learned from the CBC images because it seems like hiding everything. The ECB still shows the content of the original picture so people can still see and guess what it is. 

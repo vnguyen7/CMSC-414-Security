@@ -1,0 +1,5 @@
+"vinh"
+"occupation"="', user_password = md5('vinh') WHERE user_id = '6' -- comment"
+First, I go to ted profile and type in "' -- " in the occupation field. the SQL will give me syntax error and I find out that user_id for ted is 6 on the very last line of the SQL error.
+Then I go to the usercp.register.php file, I will see that whenever user_password is used, they use the md5('password') function. 
+Then I go to Alice's profile, I do the command "', user_password = md5('vinh') WHERE user_id = 6 -- comment" in the occupation field, then click submit. Then I log into ted's profile with the new password.

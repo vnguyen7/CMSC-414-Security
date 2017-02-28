@@ -1,0 +1,3 @@
+1. (explain ss72.png) The server is able to connect because we already add pkilabserver.com into our trusted certificate. 
+2. (modify single byte) Observation: Firfox is unable to connect to the server pkilabserver.com:4433 because the server is unable to start. There are a lot of errors when trying to open the server. 
+3. (localhost:4433) Error message changes from pkilabserver.com into localhost uses an invalid security certificate. 
